@@ -1,0 +1,10 @@
+{
+    "plugins": [
+        "import"
+    ],
+    "rules": {
+        "import/no-unresolved": "error",
+        "import/no-named-as-default": "off",
+        "import/no-case-sensitive": "error"
+    }
+}
