@@ -39,17 +39,23 @@ const App = () => {
       <Routes>
         <Route path="/test" element={<LandingPage />} />
         <Route path="/" element={<Layout />}>
-          <Route
-            index
-            element={authUser ? <LandingPage /> : <Navigate to={"/login"} />}
-          />
+          <Route index element={<LandingPage />} />
           <Route
             path="/problems"
             element={authUser ? <AllProblems /> : <Navigate to={"/login"} />}
           />
-          <Route path="/learn" element={<LearnPage />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/learn"
+            element={authUser ? <LearnPage /> : <Navigate to={"/login"} />}
+          />
+          <Route
+            path="/contact"
+            element={authUser ? <ContactUs /> : <Navigate to={"/login"} />}
+          />
+          <Route
+            path="/dashboard"
+            element={authUser ? <Dashboard /> : <Navigate to={"/login"} />}
+          />
         </Route>
 
         <Route path="/contest" element={<ContestPage />} />
